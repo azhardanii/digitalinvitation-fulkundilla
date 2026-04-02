@@ -72,7 +72,7 @@ function openInvitation() {
     }
 
     // Change image to opened envelope
-    btnImg.src = 'img/envelop-open.png';
+    btnImg.src = 'img/envelop-open.webp';
     // Freeze current hover/shake animation and reset transform as origin point for scale
     btnOpen.style.animation = 'none';
     btnOpen.style.transform = 'scale(1)';
@@ -112,7 +112,7 @@ function openInvitation() {
 
             initScrollAnimations();
         }, 1200);
-    }, 400); // Brief 400ms pause to let user see 'envelop-open.png'
+    }, 400); // Brief 400ms pause to let user see 'envelop-open.webp'
 }
 
 // ===== AUDIO CONTROLS =====
