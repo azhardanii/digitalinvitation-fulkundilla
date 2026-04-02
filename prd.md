@@ -1,8 +1,6 @@
 # PRODUCT REQUIREMENTS DOCUMENT (PRD)
-**Product Name:** Dynamic Personal Mini-Site & Greeting Engine
-**Document Version:** 1.2 (React Architecture - Dynamic Flow)
+**Product Name:** Digital Invitation
 **Architecture:** Mobile-First Web Application
-**Primary Reference:** `arya-ayufam.ucapanlebaran`, `for.jaypark`, `pesandaripinut`
 
 ---
 
