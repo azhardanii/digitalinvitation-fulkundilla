@@ -357,6 +357,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initCoverPage();
 
+    // Attempt to play audio on first page load
+    if (audio) {
+        audio.volume = 0.5;
+        audio.play().then(() => {
+            isAudioPlaying = true;
+            updateAudioButton();
+        }).catch(err => {
+            console.log('Browser blocked auto-play. Waiting for user interaction.');
+        });
+    }
+
     // Open button
     const btnOpen = document.getElementById('btn-open-invitation');
     if (btnOpen) {
