@@ -1,0 +1,150 @@
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  /* Enforce background colors for body beyond tailwind basic setup */
+  background-color: #dbd1b8;
+}
+
+/* Custom Overrides & Scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(219,209,184,0.1);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(219,209,184,0.3);
+  border-radius: 4px;
+}
+
+/* Base keyframes for items that tailwind complex arbitrary values might be tricky */
+@keyframes floatParticle {
+  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
+}
+
+.particle {
+  position: absolute;
+  background: radial-gradient(circle, rgba(219,209,184,0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatParticle linear infinite;
+}
+
+@keyframes coverFadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gentleShake {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  10% { transform: rotate(-2deg) translateY(-2px); }
+  20% { transform: rotate(2deg) translateY(0); }
+  30% { transform: rotate(-1deg) translateY(-1px); }
+  40% { transform: rotate(1deg) translateY(0); }
+  50% { transform: rotate(0deg) translateY(0); }
+}
+
+/* SCROLL ANIMATIONS */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.fade-in-left { transform: translateX(-50px); }
+.animate-on-scroll.fade-in-right { transform: translateX(50px); }
+.animate-on-scroll.fade-in-up { transform: translateY(40px); }
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+/* STATE CLASSES */
+#main-content.visible {
+  display: block;
+  animation: contentReveal 1s ease-out;
+}
+
+@keyframes contentReveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hidden-cover {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+@media (min-width: 481px) {
+  #cover-page {
+    position: absolute;
+    width: 480px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .hidden-cover {
+    transform: translateX(-50%) scale(1.05) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hidden-cover {
+    transform: scale(1.05) !important;
+  }
+}
+
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #511e28;
+  color: #dbd1b8;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.85rem;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.4s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* WISHLIST STYLES */
+.wish-card {
+  background: rgba(219,209,184,0.08);
+  border: 1px solid rgba(219,209,184,0.15);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  animation: wishSlideIn 0.5s ease-out;
+}
+
+@keyframes wishSlideIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
