@@ -72,7 +72,7 @@ function openInvitation() {
     }
 
     // Change image to opened envelope
-    btnImg.src = 'img/envelop-open.webp';
+    btnImg.src = 'assets/img/envelop-open.webp';
     // Freeze current hover/shake animation and reset transform as origin point for scale
     btnOpen.style.animation = 'none';
     btnOpen.style.transform = 'scale(1)';

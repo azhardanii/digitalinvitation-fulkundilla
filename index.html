@@ -37,8 +37,9 @@
     </script>
 
     <!-- Custom Style for Animations -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 
 <body
     class="font-secondary text-maroon-dark bg-cream overflow-x-hidden w-full max-w-full antialiased md:bg-cream md:flex md:justify-center">
@@ -49,7 +50,7 @@
 
     <!-- ===== BACKGROUND AUDIO ===== -->
     <audio id="bg-audio" preload="auto" loop>
-        <source src="audio/Rebellion%20Rose%20-%20MENANG%20Full.mp3" type="audio/mpeg">
+        <source src="assets/audio/Rebellion%20Rose%20-%20MENANG%20Full.mp3" type="audio/mpeg">
     </audio>
 
     <!-- ===== COVER PAGE ===== -->
@@ -64,7 +65,7 @@
         <!-- Cover Image & Overlay Content -->
         <div
             class="relative w-[85%] max-w-[460px] z-[2] flex flex-col items-center animate-[coverFadeIn_1.5s_ease-out]">
-            <img src="img/cover-letter.webp" alt="The Wedding of Fulkun & Dilla" class="w-full h-auto">
+            <img src="assets/img/cover-letter.webp" alt="The Wedding of Fulkun & Dilla" class="w-full h-auto">
 
             <div class="absolute bottom-[2.75rem] left-0 w-full flex flex-col items-center justify-center px-[10%]">
                 <!-- Recipient -->
@@ -81,8 +82,8 @@
                     <button id="btn-open-invitation"
                         class="bg-transparent border-none cursor-pointer p-0 transition-transform animate-[gentleShake_3s_ease-in-out_infinite] hover:scale-105"
                         aria-label="Buka Undangan">
-                        <img src="img/envelop-close.webp" alt="Buka Undangan"
-                            class="w-[100px] sm:w-[130px] h-auto transition-opacity duration-300">
+                        <img src="assets/img/envelop-close_rev2.webp" alt="Buka Undangan"
+                            class="w-[100px] h-auto transition-opacity duration-300">
                     </button>
                 </div>
             </div>
@@ -96,17 +97,35 @@
         <!-- SECTION 1: Opening / Quote with Photo -->
         <!-- Added pt-12 to push first image down slightly -->
         <section class="w-full overflow-hidden mb-24 pt-10 animate-on-scroll fade-in-up" aria-label="Opening">
-            <img src="img/section1_rev.webp" alt="Quote Background" class="w-full h-auto block" loading="lazy">
+            <img src="assets/img/section1_rev.webp" alt="Quote Background" class="w-full h-auto block" loading="lazy">
         </section>
 
-        <!-- SECTION 2: Quran Verse -->
-        <section class="w-full overflow-hidden mb-24 animate-on-scroll fade-in-left" aria-label="Ayat Al-Quran">
-            <img src="img/section2_rev2.webp" alt="QS. Ar-Rum : 21" class="w-full h-auto block" loading="lazy">
+        <!-- SECTION 2: Pesan Kehadiran -->
+        <section class="w-full mb-24 px-6 relative" aria-label="Pesan Kehadiran">
+            <div class="flex items-end gap-5">
+                <!-- Image on Layout Left -->
+                <div class="w-[45%] flex-shrink-0 animate-on-scroll fade-in-left">
+                    <img src="assets/img/section2_rev3.webp" alt="Pesan dari kami"
+                        class="w-full h-auto block scale-110 transition-transform duration-500" loading="lazy">
+                </div>
+
+                <!-- Text on Layout Right -->
+                <div class="w-[55%] animate-on-scroll fade-in-right">
+                    <p class="font-secondary text-maroon-dark text-[0.78rem] leading-[1.7] text-left font-medium">
+                        Di hari bahagia kita, yang penuh doa dan cinta ini 🤟<br><br>
+                        Yang jauh kalo bisa ya datang kami akan sangat senang, pastinya! Kalo belom bisa cukup doakan
+                        saja yg terbaik buat kita.<br><br>
+                        Kalo yg dekat, masa iya gak datang hmmm.. masa nunggu king emyu juara si duuuh.<br><br>
+                        <span class="italic font-bold text-[0.9rem] opacity-80">ini kita lagi juara dan merayakan
+                            kememanangan.</span>
+                    </p>
+                </div>
+            </div>
         </section>
 
         <!-- SECTION 3: Wedding Invitation Names -->
         <section class="w-full mb-24 animate-on-scroll fade-in-right relative" aria-label="Nama Mempelai">
-            <img src="img/section3_rev2.webp" alt="We invite you to join our wedding" class="w-full h-auto block"
+            <img src="assets/img/section3_rev3.webp" alt="We invite you to join our wedding" class="w-full h-auto block"
                 loading="lazy">
 
             <a href="https://www.instagram.com/fulkunada/" target="_blank" rel="noopener noreferrer"
@@ -134,7 +153,7 @@
 
         <!-- SECTION 4: Akad & Schedule Jepara + Maps -->
         <section class="w-full overflow-hidden mb-24 animate-on-scroll fade-in-up" aria-label="Jadwal Jepara">
-            <img src="img/section4_rev3.webp" alt="Akad Nikah" class="w-full h-auto block" loading="lazy">
+            <img src="assets/img/section4_rev3.webp" alt="Akad Nikah" class="w-full h-auto block" loading="lazy">
 
             <!-- Google Maps Button - Jepara -->
             <div class="w-full px-5 py-4 bg-cream flex justify-center">
@@ -153,7 +172,7 @@
 
         <!-- SECTION 5: Ramah Tamah Lamongan + Maps -->
         <section class="w-full overflow-hidden mb-24 animate-on-scroll fade-in-up" aria-label="Jadwal Lamongan">
-            <img src="img/section5_rev4.webp" alt="Ramah Tamah" class="w-full h-auto block" loading="lazy">
+            <img src="assets/img/section5_rev4.webp" alt="Ramah Tamah" class="w-full h-auto block" loading="lazy">
 
             <!-- Google Maps Button - Lamongan -->
             <div class="w-full px-5 py-4 bg-cream flex justify-center">
@@ -173,9 +192,9 @@
         <!-- SECTION 6: Cerita Singkat Petualangan Kita + Journey Images -->
         <section class="w-full overflow-hidden mb-24 animate-on-scroll fade-in-up" aria-label="Cerita Kami">
             <a href="https://kitatulis.my.id/" target="_blank" rel="noopener noreferrer"
-                class="block cursor-pointer transition-transform duration-300">
-                <img src="img/section6.webp" alt="Cerita Singkat Petualangan Kita" class="w-full h-auto block"
-                    loading="lazy">
+                class="block cursor-pointer transition-transform duration-300 px-10">
+                <img src="assets/img/section6_rev2.webp" alt="Cerita Singkat Petualangan Kita"
+                    class="w-full h-auto block" loading="lazy">
             </a>
 
             <!-- Journey Timeline -->
@@ -338,7 +357,7 @@
             <h2 class="font-primary text-[2rem] text-maroon-dark mb-8">Kado Pernikahan</h2>
 
             <div class="relative max-w-[380px] mx-auto rounded-3xl overflow-hidden mb-8">
-                <img src="img/section8.webp" alt="Kado Pernikahan"
+                <img src="assets/img/section8.webp" alt="Kado Pernikahan"
                     class="w-full h-auto block transition-transform duration-700 hover:scale-[1.03]">
             </div>
 
@@ -407,7 +426,7 @@
     </div>
 
     <!-- Script -->
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
